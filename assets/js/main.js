@@ -31,7 +31,7 @@ $('.modal').on('hidden.bs.modal', function (e) {
 function loadPokemonModalInfo(pokemon) {
     return `
 
-    <div class="pokedex pokemon ${pokemon.type}">
+    <div class="pokedexDetail ${pokemon.type}">
         <img src="${pokemon.photo}" alt="${pokemon.name}">
         <div class="detail">
             <ol class="types">
@@ -39,6 +39,7 @@ function loadPokemonModalInfo(pokemon) {
             </ol>
             <ul class="statsModal">
                 Base Stats
+                <br>
                 ${pokemon.stats.map((stat) =>
                     `<li class="statpokemon">${stat.stat.name} ${stat.base_stat}</li>`).join('')
                 }
